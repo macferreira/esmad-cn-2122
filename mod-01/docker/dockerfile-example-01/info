@@ -1,0 +1,15 @@
+# Build the Image
+docker build -t myapacheimage .
+
+# List the images and check your build with latest tag
+docker images
+
+# Run the container (set port host:container)
+docker run -p 80:80 myapacheimage:latest
+
+# Check your running container
+docker container ls
+
+# Kill the running container
+docker kill <id>
+ 
