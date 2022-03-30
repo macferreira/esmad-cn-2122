@@ -1,0 +1,9 @@
+version: "3"
+
+services:
+  database:
+    image: mysql:latest
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: hugesecret
+      MYSQL_DATABASE: test
