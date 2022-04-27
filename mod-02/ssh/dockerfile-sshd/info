@@ -1,0 +1,16 @@
+# Build the Image
+docker build -t mysshdimage .
+
+# Run the container
+docker run -d -p 222:22 mysshdimage:latest
+
+# ssh to the container (user root, password root)
+ssh root@localhost -p222
+
+# On Linux you can:
+# List the running containers in order to identify the ID of mysshdimage:latest
+docker container ls
+# Identify the ip of the running container through inspect
+docker inspect <container-id>
+# ssh to the container (user root, password root)
+ssh root@<ip-address>
